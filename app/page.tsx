@@ -20,6 +20,7 @@ import AvatarCircles from "@/components/ui/avatar-circles";
 import { Input } from "@/components/ui/input";
 import { TextGenerateEffect } from "@/components/ui/text-generate";
 import WavyDotPattern from "@/components/ui/wavy-dot-background";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 
 // Separate HomeSection component
 const HomeSection = ({ count }: { count: number }) => {
@@ -200,13 +201,37 @@ export default function Home() {
         className="mt-9 bg-neutral-950 p-7 gap-5 flex flex-col items-center"
       >
         <h2 className="text-neutral-50 text-4xl">Meet the Team</h2>
-        <AvatarCircles
+        {/* <AvatarCircles
           avatarUrls={["/milan.webp", "/goutham.webp"]}
           socialUrls={[
             "https://x.com/milansbagels",
             "https://x.com/notfridge_ok",
           ]}
-        />
+        /> */}
+        <div className="flex flex-row items-center justify-center mb-10 w-full">
+          <AnimatedTooltip
+            items={[
+              {
+                id: 1,
+                name: "Milan Suman",
+                designation: "Lead Developer",
+                image: "/milan.webp",
+              },
+              {
+                id: 2,
+                name: "Goutham Sreeram S B",
+                designation: "Designer | Developer",
+                image: "/goutham.webp",
+              },
+              {
+                id: 3,
+                name: "Jovit Mathew",
+                designation: "Developer",
+                image: "/jovit.webp",
+              },
+            ]}
+          />
+        </div>
       </section>
 
       <section
