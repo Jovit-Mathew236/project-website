@@ -34,8 +34,8 @@ const HomeSection = ({ count }: { count: number }) => {
         isInView ? "animate-inView" : "animate-outView"
       }`}
     >
-      <div className="flex w-full px-3 justify-around">
-        <div className="pt-10">
+      <div className="flex w-full sm:px-3 justify-around">
+        <div className="hidden md:block pt-10">
           <div className="bg-black/70 backdrop-blur-3xl px-6 py-10 rounded-[45px] flex flex-col gap-10 text-white items-center text-2xl">
             <a
               href="#home"
@@ -68,11 +68,11 @@ const HomeSection = ({ count }: { count: number }) => {
           width={1920}
           height={1080}
           alt="Never gonna give you up, Never gonna let you down."
-          className={`min-w-[660px] md:w-5/6 -top-20 -left-9 md:left-0 relative backdrop-blur-lg drop-shadow-md ${
+          className={`m-auto mt-[345px] sm:mt-auto sm:min-w-[660px] md:w-5/6 -top-20 md:-left-0 relative backdrop-blur-lg drop-shadow-md ${
             isInView ? "animate-imageInView" : "animate-imageOutView"
           }`}
         />
-        <h1 className="pt-10 text-6xl text-white">
+        <h1 className="hidden md:block pt-10 text-6xl text-white">
           <NumberTicker className="text-white" value={count} />
         </h1>
       </div>

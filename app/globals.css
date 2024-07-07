@@ -117,7 +117,7 @@ html {
 }
 
 .animate-outView {
-  transform: scale(1.019);
+  transform: scale(1.039);
   transition: transform 1s ease-in-out;
   animation: cornerOut 1s forwards;
 }
